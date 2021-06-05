@@ -20,7 +20,7 @@ parser.add_argument('out_npz', metavar='OUT.npz', type=str, help='Output file pa
 
 def main():
     args = parser.parse_args()
-    enc = encoder.get_encoder(args.model_name, "/Users/whool199/maya_tg_www/models")
+    enc = encoder.get_encoder(args.model_name, "models")
     print('Reading files')
     chunks = load_dataset(enc, args.in_text, args.combine, encoding=args.encoding)
     print('Writing', args.out_npz)

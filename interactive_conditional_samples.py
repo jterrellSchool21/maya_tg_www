@@ -62,7 +62,7 @@ def interact_model(
         batch_size = 1
     assert nsamples % batch_size == 0
 
-    enc = encoder.get_encoder(model_name, "/Users/whool199/maya_tg_www/models")
+    enc = encoder.get_encoder(model_name, "models")
     hparams = model.default_hparams()
     with open(os.path.join('models', model_name, 'hparams.json')) as f:
         hparams.override_from_dict(json.load(f))
